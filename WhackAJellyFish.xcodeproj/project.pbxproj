@@ -12,6 +12,7 @@
 		185920F11FA4F83700C9AEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185920EF1FA4F83700C9AEB2 /* Main.storyboard */; };
 		185920F31FA4F83700C9AEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185920F21FA4F83700C9AEB2 /* Assets.xcassets */; };
 		185920F61FA4F83700C9AEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185920F41FA4F83700C9AEB2 /* LaunchScreen.storyboard */; };
+		185921011FA5052900C9AEB2 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 185921001FA5052900C9AEB2 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		185920F21FA4F83700C9AEB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185920F51FA4F83700C9AEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185920F71FA4F83700C9AEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185921001FA5052900C9AEB2 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		185921031FA50BB500C9AEB2 /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textures; sourceTree = "<group>"; };
+		185921051FA50C4D00C9AEB2 /* Jellyfish.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Jellyfish.scn; path = art.scnassets/Jellyfish.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +58,11 @@
 		185920EA1FA4F83700C9AEB2 /* WhackAJellyFish */ = {
 			isa = PBXGroup;
 			children = (
+				185921051FA50C4D00C9AEB2 /* Jellyfish.scn */,
+				185921031FA50BB500C9AEB2 /* Textures */,
 				185920EB1FA4F83700C9AEB2 /* AppDelegate.swift */,
 				185920ED1FA4F83700C9AEB2 /* ViewController.swift */,
+				185921001FA5052900C9AEB2 /* art.scnassets */,
 				185920EF1FA4F83700C9AEB2 /* Main.storyboard */,
 				185920F21FA4F83700C9AEB2 /* Assets.xcassets */,
 				185920F41FA4F83700C9AEB2 /* LaunchScreen.storyboard */,
@@ -124,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				185920F61FA4F83700C9AEB2 /* LaunchScreen.storyboard in Resources */,
+				185921011FA5052900C9AEB2 /* art.scnassets in Resources */,
 				185920F31FA4F83700C9AEB2 /* Assets.xcassets in Resources */,
 				185920F11FA4F83700C9AEB2 /* Main.storyboard in Resources */,
 			);
