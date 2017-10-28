@@ -13,6 +13,7 @@
 		185920F31FA4F83700C9AEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185920F21FA4F83700C9AEB2 /* Assets.xcassets */; };
 		185920F61FA4F83700C9AEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185920F41FA4F83700C9AEB2 /* LaunchScreen.storyboard */; };
 		185921011FA5052900C9AEB2 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 185921001FA5052900C9AEB2 /* art.scnassets */; };
+		185921061FA5169300C9AEB2 /* Textures in Resources */ = {isa = PBXBuildFile; fileRef = 185921031FA50BB500C9AEB2 /* Textures */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 			files = (
 				185920F61FA4F83700C9AEB2 /* LaunchScreen.storyboard in Resources */,
 				185921011FA5052900C9AEB2 /* art.scnassets in Resources */,
+				185921061FA5169300C9AEB2 /* Textures in Resources */,
 				185920F31FA4F83700C9AEB2 /* Assets.xcassets in Resources */,
 				185920F11FA4F83700C9AEB2 /* Main.storyboard in Resources */,
 			);
