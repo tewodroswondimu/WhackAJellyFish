@@ -10,6 +10,7 @@ import UIKit
 import ARKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var playButton: UIButton!
     let configuration = ARWorldTrackingConfiguration()
     @IBOutlet weak var sceneView: ARSCNView!
     override func viewDidLoad() {
@@ -28,6 +29,9 @@ class ViewController: UIViewController {
     
     @IBAction func playButtonPressed(_ sender: Any) {
         self.addNode()
+        
+        // disable the playbutton untill the animation ends
+        playButton.isEnabled = false
     }
     
     @IBAction func resetButtonPressed(_ sender: Any) {
@@ -67,6 +71,32 @@ class ViewController: UIViewController {
         // to change the size of the 3D object, underscale multiple by a value like 0.1
     }
     
+    func animateNode(node: SCNNode) {
+        // to make the object make a shaky spin we modify the position
+        let spin = CABasicAnimation(keyPath: "position")
+        
+        // presentation is the current state of the object in the sceneview
+        // this records the starting point of the animation 
+        spin.fromValue = node.presentation.position
+        
+        // to change the duration of the animation
+        spin.duration = 0.7
+        
+        // makes sure that the return back is also animated
+        spin.autoreverses = true
+        
+        // to repeat the number of times the animation happens
+        spin.repeatCount = 5
+        
+        // this shows where you want the node to go relative to the world origin
+        // spin.toValue = SCNVector3(0,0,-2)
+        
+        // if you want to go from the current position of the node,
+        spin.toValue = SCNVector3(node.presentation.position.x - 0.2, node.presentation.position.y - 0.2, node.presentation.position.z - 0.2)
+        
+        // add the animation to the node
+        node.addAnimation(spin, forKey: "position")
+    }
     
     // Get the tap information
     @objc func handleTap(sender: UITapGestureRecognizer) {
@@ -89,10 +119,16 @@ class ViewController: UIViewController {
             print("Touched a box")
             // hit test is an array with one element
             let result = hitTest.first!
-            let geometry = result.node.geometry
-            print(geometry ?? "The object that was tapped")
+            
+            // The node that was touched
+            let touchedNode = result.node
+            
+            // Check whether the object is already animating
+            if (touchedNode.animationKeys.isEmpty) {
+                // Animate the node that was touched
+                animateNode(node: touchedNode)
+            }
         }
-        
     }
 }
 

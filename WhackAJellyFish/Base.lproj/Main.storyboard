@@ -28,7 +28,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="Play"/>
                                 <connections>
-                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4xg-U7-3oh"/>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efm-d8-MLi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuL-lq-tdL">
@@ -57,6 +57,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="dMQ-SW-pQh" id="3Ja-tr-zZM"/>
                         <outlet property="sceneView" destination="whh-5y-YMr" id="CQO-G3-kWQ"/>
                     </connections>
                 </viewController>
